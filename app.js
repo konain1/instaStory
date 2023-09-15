@@ -47,9 +47,15 @@ let dataArr = ''
 
   storylist.addEventListener('click',(event)=>{
 
-    console.log(instagram[event.target.id].story)
 
-    
+    document.getElementById('full-screen').style.display = 'block'
 
+
+   document.getElementById('full-screen').style.backgroundImage = `url(${instagram[event.target.id].story})`
+
+   setTimeout(() => {
+    document.getElementById('full-screen').style.display = 'none'
+
+   }, 3000);
     
   })
